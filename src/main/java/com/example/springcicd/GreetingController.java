@@ -2,6 +2,8 @@ package com.example.springcicd;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,5 +27,10 @@ public class GreetingController {
 		}
 		
 		return String.format("Hello: %s, you are %d years old", name, age);
+	}
+	
+	@PostMapping
+	public String createGreeting(@RequestBody CreateGreetingDTO data) {
+		return String.format("%s, %s", data.getGreeting(), data.getName());
 	}
 }
