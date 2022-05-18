@@ -16,7 +16,7 @@ public class GreetingControllerTests {
 	void testGreetingEndpoint() {
 		String output = controller.greeting();
 		System.out.println("GREETING ENDPOINT" + output);
-		assertTrue("hello, there".equals(output));
+		assertTrue("hello, ther".equals(output));
 	}
 	
 	@Test
