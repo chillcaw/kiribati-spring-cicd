@@ -53,7 +53,7 @@ public class GreetingControllerTests {
 	           "Expected customGreetingInfo() to throw Error, but it didn't"
 	    );
 
-		assertTrue("age or name arguments are null and cannot be null".equals(thrown1.getMessage()));
+		assertTrue("ge or name arguments are null and cannot be null".equals(thrown1.getMessage()));
 		assertTrue("age or name arguments are null and cannot be null".equals(thrown2.getMessage()));
 	}
 }
