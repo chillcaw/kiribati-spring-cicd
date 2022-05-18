@@ -17,4 +17,13 @@ public class GreetingController {
 	public String customGreeting(@PathVariable String name) {
 		return "hello, " + name;
 	}
+	
+	@GetMapping(value = "/{name}/{age}")
+	public String customGreetingInfo(@PathVariable String name, @PathVariable Integer age) {
+		if (name == null || age == null) {
+			throw new Error("age or name arguments are null and cannot be null");
+		}
+		
+		return String.format("Hello: %s, you are %d years old", name, age);
+	}
 }
