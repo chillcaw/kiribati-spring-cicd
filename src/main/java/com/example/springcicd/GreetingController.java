@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import org.springframework.web.bind.annotation.RequestBody;
 
-
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,14 +15,12 @@ public class GreetingController {
   @GetMapping
   public String greeting() {
 
- return "hello, there";
+    return "hello, there";
   }
 
   @GetMapping(value = "/{name}")
-  public String customGreeting(@PathVariable String name) 
-  
-  
-  {
+  public String customGreeting(@PathVariable String name) {
+
     return "hello, " + name;
   }
 
