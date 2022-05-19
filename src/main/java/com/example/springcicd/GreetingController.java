@@ -2,7 +2,11 @@ package com.example.springcicd;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PostMapping;\
+
+
+
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +26,7 @@ public class GreetingController {
 	
 	@GetMapping(value = "/{name}/{age}")
 	public String customGreetingInfo(@PathVariable String name, @PathVariable Integer age) {
-		if (name == null || age == null) {
+	if (name == null || age == null) {
 			throw new Error("age or name arguments are null and cannot be null");
 		}
 		
@@ -31,6 +35,8 @@ public class GreetingController {
 	
 	@PostMapping
 	public String createGreeting(@RequestBody CreateGreetingDTO data) {
-		return String.format("%s, %s", data.getGreeting(), data.getName());
+	return String.format("%s, %s", data.getGreeting(), data.getName());
+	
+	
 	}
 }

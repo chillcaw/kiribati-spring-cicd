@@ -18,6 +18,7 @@ jobs:
               with:
                   skipCommit: false
                   args: "--skip-sorting-imports --replace"
+                  githubToken: ${{ secrets.GITHUB_TOKEN }}
             - uses: actions/setup-java@v3
               with:
                   java-version: "18"
