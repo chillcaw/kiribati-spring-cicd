@@ -14,7 +14,7 @@ public class GreetingController {
   @GetMapping
   public String greeting() {
 
-    return "hello, there";
+    return "HELLO, there";
   }
 
   @GetMapping(value = "/{name}")
