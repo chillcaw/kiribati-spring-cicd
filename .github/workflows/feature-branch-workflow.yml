@@ -15,10 +15,10 @@ jobs:
             - uses: actions/checkout@v3
               name: Set up JDK 18
             - uses: dbelyaev/action-checkstyle@v0.5.1
-                with:
-                    github_token: ${{ secrets.GITHUB_TOKEN }}
-                    reporter: github-pr-review
-                    level: warning
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  reporter: github-pr-review
+                  level: warning
             - uses: actions/setup-java@v3
               with:
                   java-version: "18"
